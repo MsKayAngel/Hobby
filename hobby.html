@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Singing - My Hobby</title>
+        <style>
+            body {
+                background: linear-gradient(179.4deg, rgb(253, 240, 233) 2.2%, rgb(255, 194, 203) 96.2%);
+                text-align: center;
+            }
+            h1, h2 {
+                text-align: center;
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.5;
+            }
+            img {
+                max-width: 100%;
+            }
+            .intro-pic {
+                border-radius: 10px;
+                transition: all 150ms ease-in-out;
+            }
+            .intro-pic:hover {
+                filter: contrast(80%);
+                transform: scale(1.2);
+            }
+            .intouch {
+                display: inline-block;
+                margin: 20px auto;
+                border: 1px solid rgb(7, 7, 90);
+                background-color: white;
+                font-size: 20px;
+                border-radius: 5px;
+                padding: 10px 15px;
+                transition: all 150ms ease-in-out;
+            }
+            .intouch:hover {
+                background-color: rgb(7, 7, 90);
+                color: white;
+                cursor: pointer;
+            }
+            .theme-button {
+                display: inline-block;
+                margin: 20px auto;
+                font-size: 14px;
+                background-color: black;
+                padding: 10px 15px;
+                color: white;
+                border: 1px solid white;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .theme-button:hover {
+                color: black;
+                background-color: white;
+                border: 1px solid black;
+            }
+            .Bmain {
+                max-width: 600px;
+                margin: 20px auto;
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            footer {
+                text-align: center;
+                margin: 10px 0;
+                font-size: 20px;
+            }
+            .grid {
+                margin: 15px 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-gap: 20px;
+            }
+            .grid img {
+                width: 100%;
+                border-radius: 8px;
+                transition: all 150ms ease-in-out;
+            }
+            .grid img:hover {
+                transform: scale(2);
+            }
+            .dark {
+                background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+                color: white;
+            }
+            .dark .Bmain {
+                background: rgba(255, 255, 255, 0.1);
+            }
+            .dark a {
+                color: rgb(7, 7, 90);
+            }
+        </style>
+    </head>
+    <body class="dark">
+        <button class="theme-button">Change Theme</button>
+        <div class="Bmain">
+            <h1>Singing</h1>
+            <h2>My favourite hobby</h2>
+            <a href="https://en.wikipedia.org/wiki/Singing" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ah_cricket_20122_%287364759010%29.jpg/1024px-Ah_cricket_20122_%287364759010%29.jpg" alt class="intro-pic">
+            </a>
+            <div class="grid">
+                <img src="https://cdn.pixabay.com/photo/2020/11/27/07/32/choir-5781096_960_720.jpg" alt/>
+                <img src="https://cdn.pixabay.com/photo/2020/08/31/00/33/guitar-5531027_1280.jpg" alt/>
+                <img src="https://cdn.pixabay.com/photo/2017/08/06/16/25/dark-2593881_1280.jpg" alt/>
+                <img src="https://cdn.pixabay.com/photo/2022/07/22/18/22/women-7338731_960_720.jpg" alt/>
+            </div>
+            <p>
+                Singing is the act of creating musical sounds with the voice. A person whose profession is singing is called a singer, artist or vocalist (in jazz and/or popular music). Singers perform music (arias, recitatives, songs, etc.) that can be sung with or without accompaniment by musical instruments. Singing is often done in an ensemble of musicians, such as a choir. Singers may perform as soloists or accompanied by anything from a single instrument (as in art songs or some jazz styles) up to a symphony orchestra or big band.
+                <br>
+                📖
+                <a href="https://en.wikipedia.org/wiki/Singing" target="_blank">
+                    <strong>Read More on Wikipedia</strong>
+                </a>
+            </p>
+            <button class="intouch">LEARN HOW TO SING</button>
+        </div>
+        <footer>
+            Coded with Html, CSS and JavaScript by 
+            <a href="https://www.shecodes.io/graduates/144688-kaylan-siane" target="_blank">Kaylan Siane</a>
+        </footer>
+        <script>
+            function info() {
+                let q1 = prompt("Have you had any prior professional singing classes?");
+                let name = prompt("What is your name?");
+                let email = prompt("Enter your email address");
+                alert(
+                    "Thanks " + name + "! We will get back to you at the earliest."
+                );
+            }
+            let button = document.querySelector(".intouch");
+            button.addEventListener("click", info);
+            
+            function changeTheme() {
+                let body = document.querySelector("body");
+                body.classList.toggle("dark");
+            }
+            
+            let themeButton = document.querySelector(".theme-button");
+            themeButton.addEventListener("click", changeTheme);
+        </script>
+    </body>
+</html>
